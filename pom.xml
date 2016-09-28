@@ -7,7 +7,7 @@
 
 	<groupId>com.thoughtworks.lean</groupId>
 	<artifactId>leansw-service-parent</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<name>leansw-service-parent</name>
 	<description>LeanSW Service Parent</description>
 
@@ -15,7 +15,12 @@
         <java.version>1.8</java.version>
         <docker.image.prefix>leansw</docker.image.prefix>
     </properties>
-
+    <scm>
+        <url>https://github.com/tw-leansw/leansw-service-parent</url>
+        <connection>scm:git:git://github.com:tw-leansw/leansw-service-parent.git</connection>
+        <developerConnection>scm:git:git@github.com:tw-leansw/leansw-service-parent.git</developerConnection>
+        <tag>v1.0</tag>
+    </scm>
 
 	<parent>
 	    <groupId>org.springframework.boot</groupId>
@@ -113,5 +118,26 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                  <tagNameFormat>v@{project.version}</tagNameFormat>
+                  <goals>
+                    deploy
+                  </goals>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 
