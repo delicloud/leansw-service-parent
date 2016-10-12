@@ -7,7 +7,7 @@
 
 	<groupId>com.thoughtworks.lean</groupId>
 	<artifactId>leansw-service-parent</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>leansw-service-parent</name>
 	<description>LeanSW Service Parent</description>
 
@@ -55,11 +55,18 @@
 
     <pluginRepositories>
         <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/snapshot</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </pluginRepository>
+        <pluginRepository>
             <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
+            <url>http://repo.spring.io/releases</url>
         </pluginRepository>
     </pluginRepositories>
-
 
     <distributionManagement>
 	    <snapshotRepository>
